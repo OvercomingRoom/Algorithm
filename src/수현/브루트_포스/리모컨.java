@@ -15,7 +15,7 @@ public class 리모컨 {
 
         int breakdownCount = Integer.parseInt(br.readLine());
 
-        int keyCount;
+        int keyCount = 0;
 
         // 고장난 키가 없다면 타겟 채널의 숫자 길이를 keyCount로 함.
         if (breakdownCount == 0) {
@@ -49,7 +49,7 @@ public class 리모컨 {
                 
                 int minKey = Math.abs(targetChannel - 100); // 가장 많이 눌러야 하는 경우 (목표 체널까지 + 또는 -로 이동하는 경우.)
                 
-                for (int currentChannel = 0; currentChannel <= 600000; currentChannel++) {
+                for (int currentChannel = 0; currentChannel <= 999999; currentChannel++) {
 
                     int currentChannelKeyChk = isBreakdown(currentChannel);
 
@@ -58,7 +58,6 @@ public class 리모컨 {
                         minKey = Math.min(minKey, currentChannelCount); // 현재 minKwy 와 비교함.
                     }
                 }
-
                 keyCount = minKey;
             }
         }
