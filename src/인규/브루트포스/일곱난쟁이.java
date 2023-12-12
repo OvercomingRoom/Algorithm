@@ -1,4 +1,4 @@
-package 인규.수학;
+package 인규.브루트포스;
 
 import java.util.Arrays;
 import java.util.Scanner;
