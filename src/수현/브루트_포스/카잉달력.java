@@ -32,9 +32,9 @@ public class 카잉달력 {
 
             int lmc = M * N / gcd;
 
-            for (int j = 1; j <= lmc; j++) {
+            for (int j = x; j <= lmc; j+= M) {
 
-                if((j - x) % M == 0 && (j - y) % N == 0){
+                if((j - y) % N == 0){
                     bw.write(j+"\n");
                     check = true;
                     break;
