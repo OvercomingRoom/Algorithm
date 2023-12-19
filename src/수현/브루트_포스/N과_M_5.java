@@ -4,7 +4,6 @@ import java.io.*;
 import java.util.Arrays;
 
 public class N과_M_5 {
-
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     static int N, M;
     static int[] resultArr, numArr;
