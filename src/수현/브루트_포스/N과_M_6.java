@@ -3,21 +3,23 @@ package 수현.브루트_포스;
 import java.io.*;
 import java.util.Arrays;
 
-public class N과_M_5 {
+public class N과_M_6 {
 
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     static int N, M;
-    static int[] resultArr, numArr;
-    static boolean[] chk;
+    private static int[] arr;
+    private static boolean[] chk;
+    private static int[] numArr;
 
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String[] split = br.readLine().split(" ");
 
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        String[] split = br.readLine().split(" ");
         N = Integer.parseInt(split[0]);
         M = Integer.parseInt(split[1]);
 
-        resultArr = new int[M + 1];
+        arr = new int[M + 1];
         numArr = new int[N + 1];
         chk = new boolean[N + 1];
 
@@ -36,21 +38,25 @@ public class N과_M_5 {
     }
 
     static void dfs(int depth) throws IOException {
-        if (depth == M) {
+        if(depth == M){
             for (int i = 0; i < M; i++) {
-                bw.write(resultArr[i] + " ");
+                bw.write(arr[i] + " ");
             }
             bw.write("\n");
             return;
         }
 
-        for (int i = 0; i < N; i++) {
-            if (!chk[i]) {
+        for (int i = 1; i <= N; i++) {
+            if(!chk[i]){
                 chk[i] = true;
-                resultArr[depth] = numArr[i + 1];
+                arr[depth] = numArr[i];
                 dfs(depth + 1);
-                chk[i] = false;
+                for (int j = i + 1; j <= N; j++) {
+                    chk[j] = false;
+                }
             }
         }
     }
+
+
 }
