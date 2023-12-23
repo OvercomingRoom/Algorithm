@@ -1,4 +1,4 @@
-package 수현.브루트_포스;
+package 수현.브루트_포스.N과M;
 
 import java.io.*;
 import java.util.Arrays;
