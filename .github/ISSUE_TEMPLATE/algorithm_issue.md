@@ -11,7 +11,7 @@ assignees: ''
 <table>
   <tr>
     <th>날짜</th>
-    <td>2023-00-00</td>
+    <td>2024-00-00</td>
   </tr>
   <tr>
     <th>제목</th>
