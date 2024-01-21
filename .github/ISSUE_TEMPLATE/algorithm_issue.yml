@@ -1,0 +1,71 @@
+name: Algorithm Issue yaml Template
+description: 알고리즘 이슈 yaml 템플릿입니다.
+labels: "\U0001f9e9algorithm"
+body:
+  - type: markdown
+    attributes:
+      value: "## 😰해결할 알고리즘"
+  - type: input
+    id: date
+    attributes:
+      label: 날짜
+      description: 날짜를 입력해주세요.
+      placeholder: ex. 2024-01-01
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: 제목
+      description: 제목을 입력해주세요.
+    validations:
+      required: true
+  - type: dropdown
+    id: tier
+    attributes:
+      label: 난이도
+      description: 문제의 난이도를 선택해주세요.
+      options:
+        - 브론즈 V
+        - 브론즈 IV
+        - 브론즈 III
+        - 브론즈 II
+        - 브론즈 I
+        - 실버 V
+        - 실버 IV
+        - 실버 III
+        - 실버 II
+        - 실버 I
+        - 골드 V
+        - 골드 IV
+        - 골드 III
+        - 골드 II
+        - 골드 I
+        - 플래티넘 V
+        - 플래티넘 IV
+        - 플래티넘 III
+        - 플래티넘 II
+        - 플래티넘 I
+        - 다이아몬드 V
+        - 다이아몬드 IV
+        - 다이아몬드 III
+        - 다이아몬드 II
+        - 다이아몬드 I      
+        - 루비 V
+        - 루비 IV
+        - 루비 III
+        - 루비 II
+        - 루비 I   
+    validations:
+      required: true
+  - type: textarea
+    id: link
+    attributes:
+      label: 링크
+      placeholder: ex. <a href='https://link.example'>제목</a>
+      description: 문제의 링크를 남겨주세요.
+      value: |
+        <a href=''></a>
+    validations:
+      required: true
+
