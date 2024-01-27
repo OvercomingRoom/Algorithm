@@ -30,7 +30,7 @@ public class 외판원_순회 {
     }
 
     public static void dfs(int current, int cost, int start) {
-        if (current== N -1&& board[start][0] != 0) {
+        if (current == N - 1 && board[start][0] != 0) {
             min = Math.min(min, cost + board[start][0]);
             return;
         }
