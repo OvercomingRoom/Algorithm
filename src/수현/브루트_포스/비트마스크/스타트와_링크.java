@@ -3,12 +3,12 @@ package 수현.브루트_포스.비트마스크;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
 
 public class 스타트와_링크 {
 
     static int N, min;
     static int[][] S;
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
