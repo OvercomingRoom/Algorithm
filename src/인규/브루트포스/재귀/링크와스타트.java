@@ -1,4 +1,4 @@
-package 인규.브루트포스;
+package 인규.브루트포스.재귀;
 
 import java.util.Scanner;
 

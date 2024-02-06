@@ -1,27 +1,25 @@
-package 인규.순열;
+package 인규.브루트포스.순열;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
-public class 다음순열 {
+public class 모든순열 {
 
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     int N = Integer.parseInt(br.readLine());
 
-    List<Integer> list = Arrays.stream(br.readLine().split(" ")).map(Integer::parseInt).collect(
-        Collectors.toList());
+    List<Integer> list = IntStream.rangeClosed(1, N).boxed().collect(Collectors.toList());
 
-    if (nextPermutation(list)) {
+    do {
       list.forEach(num -> System.out.print(num + " "));
-    } else {
-      System.out.println(-1);
-    }
+      System.out.println();
+    } while (nextPermutation(list));
   }
 
   static boolean nextPermutation(List<Integer> list) {
@@ -44,4 +42,5 @@ public class 다음순열 {
 
     return true;
   }
+
 }

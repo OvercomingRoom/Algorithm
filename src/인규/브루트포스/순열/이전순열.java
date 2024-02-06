@@ -1,4 +1,4 @@
-package 인규.순열;
+package 인규.브루트포스.순열;
 
 import java.io.BufferedReader;
 import java.io.IOException;

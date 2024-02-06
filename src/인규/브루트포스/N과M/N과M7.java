@@ -1,13 +1,12 @@
-package 인규.브루트포스;
+package 인규.브루트포스.N과M;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class N과M6 {
+public class N과M7 {
 
-  public static int[] arr, nums;
-  public static boolean[] visit;
   public static int N, M;
+  public static int[] arr, nums;
 
   public static StringBuilder sb = new StringBuilder();
 
@@ -18,30 +17,27 @@ public class N과M6 {
 
     arr = new int[M];
     nums = new int[N];
-    visit = new boolean[N];
+
     for (int i = 0; i < N; i++) {
       nums[i] = sc.nextInt();
     }
     Arrays.sort(nums);
-    dfs(0, 0);
+    dfs(0);
     System.out.println(sb);
+
   }
 
-  public static void dfs(int current, int depth) {
+  public static void dfs(int depth) {
     if (depth == M) {
-      for (int i = 0; i < M; i++) {
-        sb.append(arr[i]).append(' ');
+      for (int i : arr) {
+        sb.append(i).append(' ');
       }
       sb.append('\n');
       return;
     }
-    for (int i = current; i < N; i++) {
-      if (!visit[i]) {
-        visit[i] = true;
-        arr[depth] = nums[i];
-        dfs(i, depth + 1);
-        visit[i] = false;
-      }
+    for (int i = 0; i < N; i++) {
+      arr[depth] = nums[i];
+      dfs(depth + 1);
     }
   }
 }

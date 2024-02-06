@@ -1,4 +1,4 @@
-package 인규.브루트포스;
+package 인규.브루트포스.N과M;
 
 import java.util.Arrays;
 import java.util.Scanner;

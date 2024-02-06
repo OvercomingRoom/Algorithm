@@ -1,12 +1,11 @@
-package 인규.브루트포스;
+package 인규.브루트포스.N과M;
 
 import java.util.Scanner;
 
-public class N과M3 {
+public class N과M1 {
 
   public static int[] arr;
   public static boolean[] visit;
-
 
   public static StringBuilder sb = new StringBuilder();
 
@@ -15,10 +14,11 @@ public class N과M3 {
     int N = sc.nextInt();
     int M = sc.nextInt();
 
-    arr = new int[M];
     visit = new boolean[N];
+    arr = new int[M];
     dfs(N, M, 0);
     System.out.println(sb);
+
   }
 
   public static void dfs(int N, int M, int depth) {
@@ -32,11 +32,12 @@ public class N과M3 {
 
     for (int i = 0; i < N; i++) {
       if (!visit[i]) {
+        visit[i] = true;
         arr[depth] = i + 1;
         dfs(N, M, depth + 1);
+        visit[i] = false;
       }
     }
-
   }
 
 }
