@@ -24,7 +24,7 @@ public class 가장_긴_증가하는_부분_수열 {
             for (int j = 0; j < i; j++) {
                 // A[j] 가 A[i] 보다 작고,
                 // dp[i] 가 dp[j] + 1 보다 작은 경우
-                if(A[i] > A[j] && dp[i] >= dp[j]){
+                if(A[i] > A[j] && dp[i] <= dp[j]){
                     dp[i] = dp[j] + 1; // 수열 길이를 늘려줌
                 }
             }
