@@ -9,6 +9,7 @@ public class 연속합 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
+
         int[] A = new int[N];
         int[] dp = new int[N];
 
